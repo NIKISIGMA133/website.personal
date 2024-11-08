@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nugget Tahu Sehat</title>
+    <style>
+        /* CSS Dasar */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: linear-gradient(135deg, #ffcc80, #ff8c00);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #35424a;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h1,
+        h2 {
+            color: #ff8c00;
+        }
+
+        p,
+        ul,
+        ol {
+            max-width: 600px;
+            margin: auto;
+            text-align: justify;
+        }
+
+        section {
+            padding: 1em;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            font-size: 18px;
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .menu-section {
+            background-color: #f7c35f;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .menu-price {
+            color: #666;
+        }
+
+        .button-order {
+            display: block;
+            background-color: #35424a;
+            color: #fff;
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .button-order:hover {
+            background-color: #2c3a3d;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+            padding: 1em;
+            background: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5em;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 0.5em;
+            margin-bottom: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #ff8c00;
+            color: white;
+            border: none;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #e07a00;
+        }
+
+        footer {
+            background-color: #35424a;
+            color: #ffffff;
+            text-align: center;
+            padding: 1em;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* CSS untuk gambar tahu */
+        .tahu-image,
+        .nugget-image {
+            width: 80%;
+            /* Membatasi gambar hanya 80% dari lebar kontainer */
+            max-width: 400px;
+            /* Maksimum lebar 400px */
+            height: auto;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* CSS untuk video */
+        .video-container {
+            width: 80%;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 10px;
+            border: 3px solid #e07a00;
+            border-radius: 8px;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        video {
+            width: 100%;
+            height: 80vh;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Nugget Tahu Sehat</h1>
+    </header>
+
+    <div class="container">
+        <img src="tahu.jpg" alt="Tahu Mentah" class="tahu-image">
+
+        <section id="manfaat">
+            <h2>Manfaat Tahu</h2>
+            <ul>
+                <li><strong>Sehat dan Bergizi:</strong> Tahu mengandung protein yang tinggi dan rendah kalori, sangat
+                    baik untuk kesehatan tubuh.</li>
+                <li><strong>Meningkatkan Kesehatan Tulang:</strong> Kandungan kalsium dalam tahu membantu menjaga
+                    kekuatan tulang dan gigi.</li>
+                <li><strong>Mudah Dicerna:</strong> Tahu mudah dicerna oleh tubuh, cocok untuk semua usia, termasuk
+                    lansia dan anak-anak.</li>
+                <li><strong>Sumber Zat Besi:</strong> Tahu juga merupakan sumber zat besi yang penting untuk mencegah
+                    anemia.</li>
+                <li><strong>Menurunkan Kolesterol:</strong> Tahu adalah sumber lemak tak jenuh yang membantu menurunkan
+                    kolesterol jahat dalam tubuh.</li>
+            </ul>
+        </section>
+
+        <!-- Menambahkan Video Cara Pembuatan Nugget Tahu -->
+        <div class="video-container">
+            <h2>Video Cara Membuat Nugget Tahu</h2>
+            <video controls>
+                <source src="video-nugget-tahu.mp4" type="video/mp4">
+                Browser Anda tidak mendukung elemen video.
+            </video>
+        </div>
+
+        <!-- Menambahkan Foto Nugget Tahu yang Sudah Jadi -->
+
+
+        <section id="cara">
+            <h2>Cara Membuat Nugget Tahu</h2>
+            <ol>
+                <li>Siapkan bahan-bahan berikut:
+                    <ul>
+                        <li>6 buah tahu</li>
+                        <li>1 buah wortel, parut</li>
+                        <li>1 butir telur</li>
+                        <li>2 bawang merah, haluskan</li>
+                        <li>1 bawang putih, haluskan</li>
+                        <li>1 1/2 sdm kaldu bubuk</li>
+                        <li>1/2 sdt garam</li>
+                        <li>1/2 sdm lada bubuk</li>
+                        <li>4 sdm tepung serba guna</li>
+                    </ul>
+                </li>
+                <li>Haluskan tahu, campurkan wortel parut, telur, bawang merah dan bawang putih halus.</li>
+                <li>Tambahkan kaldu bubuk, garam, lada bubuk, dan tepung serba guna. Aduk hingga tercampur rata.</li>
+                <li>Masukkan adonan ke dalam loyang dan kukus selama 25-30 menit.</li>
+                <li>Setelah matang, potong nugget sesuai selera.</li>
+                <li>Celupkan potongan nugget ke dalam telur kocok, lalu balurkan dengan tepung panir.</li>
+                <li>Goreng nugget dalam minyak panas dengan api sedang hingga berwarna kecoklatan.</li>
+            </ol>
+        </section>
+
+        <!-- Menambahkan Cara Menyajikan -->
+        <section id="cara-menyajikan">
+            <h2>Cara Menyajikan Nugget Tahu</h2>
+            <p>Nugget tahu dapat disajikan dengan berbagai cara untuk menambah selera makan. Berikut beberapa cara
+                penyajian yang bisa dicoba:</p>
+            <ul>
+                <li>Sajikan dengan saus sambal atau saus tomat sebagai cocolan.</li>
+                <li>Tambahkan mayones atau saus keju untuk rasa yang lebih kaya.</li>
+                <li>Hidangkan dengan potongan sayuran segar seperti selada, timun, atau wortel untuk menu yang lebih
+                    sehat.</li>
+            </ul>
+        </section>
+                <img src="gambar-tahu.jpg" alt="Nugget Tahu yang Sudah Jadi" class="nugget-image">
+        <section id="menu">
+            <div class="menu-section">
+                <h2>Menu Pilihan</h2>
+                <div class="menu-item">
+                    <span>🍢 Nugget Tahu (Isi 3) - Mika</span>
+                    <span class="menu-price">Rp5.000</span>
+                </div>
+                <div class="menu-item">
+                    <span>🍢 Nugget Tahu + Saus</span>
+                    <span class="menu-price">Rp7.000</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="pesan">
+            <h2>Pesan Sekarang!</h2>
+            <p>Isi formulir di bawah ini untuk memesan nugget tahu:</p>
+
+            <form action="mailto:nikisorong640@gmail.com" method="get" enctype="text/plain">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <input type="submit" value="Pesan Nugget Tahu">
+                <input type="reset" value="Reset">
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Nugget Tahu Sehat. Semua Hak Dilindungi.</p>
+        <p>Instagram: <a href="https://instagram.com/niki_nenobais" target="_blank">@niki_nenobais</a> | Kelas: <a
+                href="https://instagram.com/classique.x2" target="_blank">@classique.x2</a></p>
+    </footer>
+
+    <script>
+        // Animasi Scroll Muncul dan Hilang
+        const sections = document.querySelectorAll("section");
+
+        function handleScrollAnimation() {
+            sections.forEach((section) => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const sectionBottom = section.getBoundingClientRect().bottom;
+                const windowHeight = window.innerHeight;
+
+                // Muncul saat bagian bawah elemen masuk layar, hilang saat keluar layar
+                if (sectionTop < windowHeight && sectionBottom > 0) {
+                    section.classList.add("show");
+                } else {
+                    section.classList.remove("show");
+                }
+            });
+        }
+
+        window.addEventListener("scroll", handleScrollAnimation);
+        window.addEventListener("load", handleScrollAnimation);
+    </script>
+
+</body>
+
+</html>
