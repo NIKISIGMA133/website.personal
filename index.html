@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nugget Tahu Sehat</title>
     <style>
-        /* CSS Dasar */
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -152,13 +151,10 @@
             margin: 5px 0;
         }
 
-        /* CSS untuk gambar tahu */
         .tahu-image,
         .nugget-image {
             width: 80%;
-            /* Membatasi gambar hanya 80% dari lebar kontainer */
             max-width: 400px;
-            /* Maksimum lebar 400px */
             height: auto;
             border-radius: 8px;
             margin-top: 20px;
@@ -167,7 +163,6 @@
             margin-right: auto;
         }
 
-        /* CSS untuk video */
         .video-container {
             width: 80%;
             max-width: 400px;
@@ -214,7 +209,6 @@
             </ul>
         </section>
 
-        <!-- Menambahkan Video Cara Pembuatan Nugget Tahu -->
         <div class="video-container">
             <h2>Video Cara Membuat Nugget Tahu</h2>
             <video controls>
@@ -222,8 +216,6 @@
                 Browser Anda tidak mendukung elemen video.
             </video>
         </div>
-
-        <!-- Menambahkan Foto Nugget Tahu yang Sudah Jadi -->
 
 
         <section id="cara">
@@ -251,7 +243,6 @@
             </ol>
         </section>
 
-        <!-- Menambahkan Cara Menyajikan -->
         <section id="cara-menyajikan">
             <h2>Cara Menyajikan Nugget Tahu</h2>
             <p>Nugget tahu dapat disajikan dengan berbagai cara untuk menambah selera makan. Berikut beberapa cara
@@ -302,7 +293,6 @@
     </footer>
 
     <script>
-        // Animasi Scroll Muncul dan Hilang
         const sections = document.querySelectorAll("section");
 
         function handleScrollAnimation() {
@@ -311,7 +301,6 @@
                 const sectionBottom = section.getBoundingClientRect().bottom;
                 const windowHeight = window.innerHeight;
 
-                // Muncul saat bagian bawah elemen masuk layar, hilang saat keluar layar
                 if (sectionTop < windowHeight && sectionBottom > 0) {
                     section.classList.add("show");
                 } else {
